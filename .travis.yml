@@ -7,5 +7,5 @@ before_install:
 
 # "-- -- coverage" to exit the test
 script:
-  - docker run -e CI=true mogu/docker-react npm run test -- --watchAll-false
+  - docker run -e CI=true mogu/docker-react npm run test -- --watchAll=false
 
