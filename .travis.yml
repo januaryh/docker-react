@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t mogu/docker-react -f Dockerfile.dev .
+
+# "-- -- coverage" to exit the test
+script:
+  - docker run mogu/docker-react npm run test -- --coverage
+
